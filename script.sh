@@ -1,5 +1,6 @@
 mkdir test
 cp archive.zip test
+cp create.sql test
 cd test
 unzip archive.zip
 rm archive.zip
@@ -11,3 +12,4 @@ SYMBOL,SERIES,OPEN,HIGH,LOW,CLOSE,LAST,PREVCLOSE,TOTTRDQTY,TOTTRDVAL,TIMESTAMP,T
 ' sqlite.final
 rm *.csv
 rm *.zip
+sqlite3 final.sqlite < create.sql
